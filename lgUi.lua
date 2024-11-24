@@ -562,7 +562,7 @@ local campSiteBtp = Tps:CreateButton({
 local libtp = Tps:CreateButton({
 	Name     = "Layer 3 Door (real)",
 	Callback = function()
-        char.PrimaryPart.CFrame = CFrame.new(1444, -26, -495)
+        char.PrimaryPart.CFrame = CFrame.new(1933, 5, -1463)
 	end,
 })
 
