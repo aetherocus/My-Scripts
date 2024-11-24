@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local plr = game:GetService("Players").LocalPlayer
-local char = plr.Character
+local char = plr.Character or plr.CharacterAdded:wait()
 local god = false
 
 local Window = Rayfield:CreateWindow({
@@ -91,6 +91,13 @@ local Hallwaytp = Tps:CreateButton({
 	end,
 })
 
+local bindintp = Tps:CreateButton({
+	Name     = "Binding Rune",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-76, -2, -69)
+	end,
+})
+
 local BlindChasmtp = Tps:CreateButton({
 	Name     = "Blind Chasm",
 	Callback = function()
@@ -105,10 +112,59 @@ local BlindChasm2tp = Tps:CreateButton({
 	end,
 })
 
+local blindchasm3tp = Tps:CreateButton({
+	Name     = "Blind Chasm 3 (Mary ann Safe Spot)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(40, 76, 120)
+	end,
+})
+
+local musicnote0tp = Tps:CreateButton({
+	Name     = "Music note (Banjo Quest)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(27, -20, 188)
+	end,
+})
+
+local musicnote1tp = Tps:CreateButton({
+	Name     = "Music note (Healing)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(1206, 100, 45)
+	end,
+})
+
+local musicnote2tp = Tps:CreateButton({
+	Name     = "Music note (Debuff)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(1129, -25, -764)
+	end,
+})
+
+local musicnote3tp = Tps:CreateButton({
+	Name     = "Music note (Passive)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-71, 52, -1145)
+	end,
+})
+
 local kebabtp = Tps:CreateButton({
 	Name     = "Kebab Dude",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(-79, -56, 162)
+	end,
+})
+
+local kebab1tp = Tps:CreateButton({
+	Name     = "Meat (Kebab Quest)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-79, -56, 162)
+	end,
+})
+
+local kebab2tp = Tps:CreateButton({
+	Name     = "Moss (Kebab Quest)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-249, -83, -1314)
 	end,
 })
 
@@ -147,6 +203,13 @@ local WizardsRetreattp = Tps:CreateButton({
 	end,
 })
 
+local milotp = Tps:CreateButton({
+	Name     = "Milo (Jousting Set)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-38, -32, 277)
+	end,
+})
+
 local SlidersHeaventp = Tps:CreateButton({
 	Name     = "Sliders Heaven",
 	Callback = function()
@@ -182,6 +245,13 @@ local Davidtp = Tps:CreateButton({
 	end,
 })
 
+local Dripstacktp = Tps:CreateButton({
+	Name     = "The Drip Shack",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-21, -72, -210)
+	end,
+})
+
 local colotp = Tps:CreateButton({
 	Name     = "The Colosseum",
 	Callback = function()
@@ -189,10 +259,45 @@ local colotp = Tps:CreateButton({
 	end,
 })
 
+local crusaderstp = Tps:CreateButton({
+	Name     = "Crusaders Helm",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(492, 14, 186)
+	end,
+})
+
+local gladiatortp = Tps:CreateButton({
+	Name     = "Gladiator Outfit",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(534, 55, 188)
+	end,
+})
+
+local duelisttp = Tps:CreateButton({
+	Name     = "Duelist",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(490, 49, 51)
+	end,
+})
+
 local bartp = Tps:CreateButton({
 	Name     = "The Barber",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(674, 11, 394)
+	end,
+})
+
+local lutetp = Tps:CreateButton({
+	Name     = "Lute, The BUFF Guy",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(696, 11, 418)
+	end,
+})
+
+local pickaxetp = Tps:CreateButton({
+	Name     = "Pickaxe (Axes Skin)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(666, 11, 425)
 	end,
 })
 
@@ -217,10 +322,45 @@ local Skjoldtp = Tps:CreateButton({
 	end,
 })
 
+local flimsytp = Tps:CreateButton({
+	Name     = "Flimsy Guard",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(796, 91, 224)
+	end,
+})
+
+local variedlandtp = Tps:CreateButton({
+	Name     = "Varied Landsknecht Outfit",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(831, 82, 147)
+	end,
+})
+
+local historicalrecordtp = Tps:CreateButton({
+	Name     = "Historical Record, by Nelson",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(512, -38, -311)
+	end,
+})
+
 local Bulwarktp = Tps:CreateButton({
 	Name     = "Bulwark",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(838, -7, -357)
+	end,
+})
+
+local Sleightp = Tps:CreateButton({
+	Name     = "The Sleigh",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(582,937,-1015)
+	end,
+})
+
+local Axetp = Tps:CreateButton({
+	Name     = "Axe",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(830, -6, -325)
 	end,
 })
 
@@ -263,6 +403,20 @@ local lowBulwarktp = Tps:CreateButton({
 	Name     = "Lower Bulwark",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(701, -43, -268)
+	end,
+})
+
+local daggertp = Tps:CreateButton({
+	Name     = "Dagger",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(835, -47, -354)
+	end,
+})
+
+local BarrelGuardtp = Tps:CreateButton({
+	Name     = "Barrel Man",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(831, -72, -352)
 	end,
 })
 
@@ -344,6 +498,13 @@ local AncientLantern2tp = Tps:CreateButton({
 	end,
 })
 
+local halfswordtp = Tps:CreateButton({
+	Name     = "Half-Sword Guy",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(1079, 73, 304)
+	end,
+})
+
 local fisheroutfittp = Tps:CreateButton({
 	Name     = "Fishermans Outfit",
 	Callback = function()
@@ -386,6 +547,13 @@ local campSiteBtp = Tps:CreateButton({
 	end,
 })
 
+local Billhooktp = Tps:CreateButton({
+	Name     = "Billhook",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(1450, -25, -502)
+	end,
+})
+
 local Lightkeepertp = Tps:CreateButton({
 	Name     = "Lightkeeper Outpost",
 	Callback = function()
@@ -393,10 +561,60 @@ local Lightkeepertp = Tps:CreateButton({
 	end,
 })
 
-local Lightkeepertp = Tps:CreateButton({
-	Name     = "Abandoned Forge",
+local BurgerBarntp = Tps:CreateButton({
+	Name     = "Burger Barn",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(1044, 609, -990)
+	end,
+})
+
+local abandonedtp = Tps:CreateButton({
+	Name     = "The Abandoned Forge",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(313, 1, -402)
+	end,
+})
+
+local testtp = Tps:CreateButton({
+	Name     = "The Test Place",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-1508,87,-38)
+	end,
+})
+
+local ratmantp = Tps:CreateButton({
+	Name     = "Ratmans Den",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-1669,39,-1385)
+	end,
+})
+
+
+local excaliburtp = Tps:CreateButton({
+	Name     = "Excalibur",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(210, 8, -387)
+	end,
+})
+
+local Pavlushkatp = Tps:CreateButton({
+	Name     = "Pavlushka (Portable Pooping Station)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(278, 17, -432)
+	end,
+})
+
+local shattertp = Tps:CreateButton({
+	Name     = "Shatter",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(336, -48, -446)
+	end,
+})
+
+local billytp = Tps:CreateButton({
+	Name     = "Billy (Banjo Quest)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(187, -33, -390)
 	end,
 })
 
@@ -415,7 +633,7 @@ local Fissuretp = Tps:CreateButton({
 })
 
 local Landsknechttp = Tps:CreateButton({
-	Name     = "Landsknecht",
+	Name     = "Landsknecht Teacher (Also Zweihander)",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(-149, -44, -1014)
 	end,
@@ -442,6 +660,20 @@ local Lagoontp = Tps:CreateButton({
 	end,
 })
 
+local mudtp = Tps:CreateButton({
+	Name     = "Muddening Rune",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-293, -53, -1185)
+	end,
+})
+
+local filtertp = Tps:CreateButton({
+	Name     = "The Filter",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-309, -256, -1344)
+	end,
+})
+
 local Endlessbottomtp = Tps:CreateButton({
 	Name     = "Endless Tower (Bottom)",
 	Callback = function()
@@ -453,6 +685,13 @@ local EndlessToptp = Tps:CreateButton({
 	Name     = "Endless Tower (Top)",
 	Callback = function()
         char.PrimaryPart.CFrame = CFrame.new(-79, 57, -1140)
+	end,
+})
+
+local sparthtp = Tps:CreateButton({
+	Name     = "Sparth Axe",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-38, 63, -1004)
 	end,
 })
 
