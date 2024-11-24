@@ -489,6 +489,13 @@ local AncientLanterntp = Tps:CreateButton({
 	end,
 })
 
+local AncientLantern3tp = Tps:CreateButton({
+	Name     = "Ancient Door 2",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(843, 58, -551)
+	end,
+})
+
 local AncientLantern2tp = Tps:CreateButton({
 	Name     = "Ancient Door (Top)",
 	Callback = function()
