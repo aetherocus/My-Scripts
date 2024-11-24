@@ -10,15 +10,15 @@ local Window = Rayfield:CreateWindow({
 	Theme           = "Default",
 
          KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Ultimate Lore Gaymer Gui",
-      Subtitle = "Key System",
-      Note = "key is secret tee hee", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"IAKURO3ONTOP"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+         KeySettings = {
+              Title = "Ultimate Lore Gaymer Gui",
+              Subtitle = "Key System",
+              Note = "key is secret tee hee", -- Use this to tell the user how to get a key
+              FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+              SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+              GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+              Key = {"IAKURO3ONTOP"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+         }
 })
 
 Rayfield:Notify({
@@ -89,11 +89,12 @@ local GodMode = Main:CreateToggle({
 local RemoteName = Main:CreateInput({
    Name = "Bind Attacks",
    CurrentValue = "",
-   PlaceholderText = "Ex: HeavyAttack,Q",
+   PlaceholderText = "Ex: HeavyAttack,G",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
    Callback = function(Text)
-        local splitted = string.split(Text,",")
+        local splitted = Text:split(",")
+			
         local UserInputService = game:GetService("UserInputService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
