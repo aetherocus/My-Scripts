@@ -31,7 +31,7 @@ Section:Set("Auto Parry")
 local function loadparry(Char)
    local yes = Instance.new("Part", workspace)
    yes.Name = "IAKURO3ONTOP"
-   yes.Size = Vector3.new(15,15,15)
+   yes.Size = Vector3.new(20,20,20)
    yes.Transparency = 0.5
    yes.Shape = Enum.PartType.Ball
    yes.BrickColor = BrickColor.new(6)
@@ -42,8 +42,9 @@ local function loadparry(Char)
    end)
    yes.touched:Connect(function(part)
        if part.Parent:FindFirstChildWhichIsA("Humanoid") then
-           if part.Parent:FindFirstChild("AttackStun") then
-               print("attacking")
+           print("found plr")
+           if part.Parent:FindFirstChild("AttackStun") then       
+                print(part.Parent.Name .. " is attacking")
            end
        end
    end)
