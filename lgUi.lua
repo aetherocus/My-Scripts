@@ -31,9 +31,11 @@ Rayfield:Notify({
 
 local Main  = Window:CreateTab("Main", 4483362458)
 local Tps = Window:CreateTab("Tps", 4483362458)
+local Keybinds = Window:CreateTab("Keybinds", 4483362458)
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
+local Keybinds = Keybinds:CreateSection("Keybinds")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
@@ -98,7 +100,7 @@ local RemoteName = Main:CreateInput({
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
 
-	local Keybind = Main:CreateKeybind({
+	local Keybind = Keybinds:CreateKeybind({
                 Name = "Keybind Example",
                 CurrentKeybind = "Q",
                 HoldToInteract = false,
