@@ -101,7 +101,7 @@ local RemoteName = Main:CreateInput({
 	local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
 
 	local Keybind = Keybinds:CreateKeybind({
-                Name = splitted[1],
+                Name = splitted[1] .. math.random(5000,10000),
                 CurrentKeybind = splitted[2],
                 HoldToInteract = false,
                 Flag = math.random(5000,10000), 
