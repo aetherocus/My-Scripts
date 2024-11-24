@@ -98,7 +98,7 @@ local RemoteName = Main:CreateInput({
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
 
-	local Keybind = Tab:CreateKeybind({
+	local Keybind = Main:CreateKeybind({
                 Name = "Keybind Example",
                 CurrentKeybind = "Q",
                 HoldToInteract = false,
