@@ -21,11 +21,9 @@ Rayfield:Notify({
 
 local Main  = Window:CreateTab("Main", 4483362458)
 local Tps = Window:CreateTab("Tps", 4483362458)
-local AutoParry = Window:CreateTab("Auto Parry (W.I.P)", 4483362458)
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
-local autoparry = AutoParry:CreateSection("Autoparry")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
@@ -716,9 +714,7 @@ local Maskttrial2tp = Tps:CreateButton({
 	end,
 })
 
-
 main:Set("Main")
 tps:Set("Tps")
-autoparry:Set("Autoparry")
 
 Rayfield:LoadConfiguration()
