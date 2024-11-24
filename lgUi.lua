@@ -183,7 +183,14 @@ local dojotp = Tps:CreateButton({
 local L5tp = Tps:CreateButton({
 	Name     = "The Edge of Deeps Stomach (Door)",
 	Callback = function()
-        char.PrimaryPart.CFrame = CFrame.new(414, 56, 1158)
+        char.PrimaryPart.CFrame = CFrame.new(997, -212, 1174)
+	end,
+})
+
+local Slooperstp = Tps:CreateButton({
+	Name     = "The Slopper Place",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(1380, -4, 678)
 	end,
 })
 
