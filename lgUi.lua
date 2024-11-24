@@ -89,7 +89,7 @@ local GodMode = Main:CreateToggle({
 local RemoteName = Main:CreateInput({
    Name = "Bind Attacks",
    CurrentValue = "",
-   PlaceholderText = "Ex: HeavyAttack,G",
+   PlaceholderText = "Ex: HeavyAttack,G,1",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
    Callback = function(Text)
@@ -104,7 +104,7 @@ local RemoteName = Main:CreateInput({
 		[2] = "server2",
 		[3] = splitted[1],
 		[4] = CFrame.new(322.2025451660156, 1.2266260385513306, -412.837158203125, 0.5210793018341064, 4.975538558937842e-08, -0.8535082936286926, 3.810540505355675e-08, 1, 8.155905106832506e-08, 0.8535082936286926, -7.502200816134064e-08, 0.5210793018341064),
-		[5] = 1
+		[5] = splitted[3]
 	}
 
 	-- Function to send the request to the server
