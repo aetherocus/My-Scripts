@@ -35,7 +35,7 @@ local Keybinds = Window:CreateTab("Keybinds", 4483362458)
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
-local Keybinds = Keybinds:CreateSection("Keybinds")
+local keybinds = Keybinds:CreateSection("Keybinds")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
@@ -792,5 +792,6 @@ local Maskttrial2tp = Tps:CreateButton({
 
 main:Set("Main")
 tps:Set("Tps")
+keybinds:Set("Keybinds")
 
 Rayfield:LoadConfiguration()
