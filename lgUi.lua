@@ -101,8 +101,8 @@ local RemoteName = Main:CreateInput({
 	local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
 
 	local Keybind = Keybinds:CreateKeybind({
-                Name = "Keybind Example",
-                CurrentKeybind = "Q",
+                Name = splitted[1],
+                CurrentKeybind = splitted[2],
                 HoldToInteract = false,
                 Flag = "Binded", 
                 Callback = function(Keybind)
