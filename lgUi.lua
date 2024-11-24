@@ -96,9 +96,6 @@ local RemoteName = Main:CreateInput({
    Flag = "Input1",
    Callback = function(Text)
         local splitted = Text:split(",")
-			
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
 
 	local Keybind = Keybinds:CreateKeybind({
                 Name = splitted[1] .. math.random(5000,10000),
@@ -106,6 +103,9 @@ local RemoteName = Main:CreateInput({
                 HoldToInteract = false,
                 Flag = math.random(5000,10000), 
                 Callback = function(Keybind)
+                       local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	               local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
+						
                        local args = {
 		             [1] = "custom",
 		             [2] = "server2",
