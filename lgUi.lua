@@ -721,6 +721,13 @@ local Deformedtp = Tps:CreateButton({
 	end,
 })
 
+local Silastp = Tps:CreateButton({
+	Name     = "Silas (Paladins Guard)",
+	Callback = function()
+        char.PrimaryPart.CFrame = CFrame.new(-26, -232, -717)
+	end,
+})
+
 local Maskttrialtp = Tps:CreateButton({
 	Name     = "Mask Trial (NPC)",
 	Callback = function()
