@@ -226,7 +226,7 @@ local tallmessage = ChatBypasser:CreateButton({
 })
 
 local fixfilter = ChatBypasser:CreateButton({
-	Name = "Tall Message",
+	Name = "Fix Filter",
 	Callback = function()
 		chat("abcdefg()!")
 	end,
