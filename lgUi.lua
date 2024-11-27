@@ -123,12 +123,12 @@ Rayfield:Notify({
 
 local Main  = Window:CreateTab("Main", 4483362458)
 local Tps = Window:CreateTab("Tps", 4483362458)
-local ChatBypasser = Window:CreateTab("Chat", 4483362458)
+local Chat = Window:CreateTab("Chat", 4483362458)
 
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
-local chatBypasser = ChatBypasser:CreateSection("ChatBypasser")
+local chat = ChatBypasser:CreateSection("Chat")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
@@ -900,7 +900,7 @@ local Maskttrial2tp = Tps:CreateButton({
 
 main:Set("Main")
 tps:Set("Tps")
-chatBypasser:Set("Chat")
+chat:Set("Chat")
 
 Rayfield:LoadConfiguration()
 
