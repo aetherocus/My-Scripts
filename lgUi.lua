@@ -83,7 +83,7 @@ local Chatbypasser = Main:CreateButton({
 	Callback = function()
 		Rayfield:Notify({
 			Title    = "Notify",
-			Content  = "Infinite Yield",
+			Content  = "Cummers",
 			Duration = 3.5,
 			Image    = 4483362458,
 		})
