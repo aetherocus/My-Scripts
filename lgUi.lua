@@ -210,7 +210,7 @@ local autobypass = Chat:CreateToggle({
 		textBox.FocusLost:Connect(function(enter)
 			if enter and autobypass then
 				if textBox.Text ~= "" then
-					chat(bypasstext(textBox.Text, 1))
+					chat(bypasstext(textBox.Text))
 					textBox.Text = ""
 				end
 			end
