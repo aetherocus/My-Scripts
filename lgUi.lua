@@ -4,8 +4,6 @@ local char = plr.Character or plr.CharacterAdded:wait()
 local god = false
 local autobypass = false
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjayZ/More-Scripts/refs/heads/main/Anthony's%20ACL"))() -- anti chat logger (not by me)
-
 function chat(msg)
 
 	if game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.TextChatService then
