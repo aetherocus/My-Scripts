@@ -4,7 +4,7 @@ local char = plr.Character or plr.CharacterAdded:wait()
 local god = false
 local autobypass = false
 
-function chat(msg)
+local function chat(msg)
 
 	if game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.TextChatService then
 		game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(msg)
