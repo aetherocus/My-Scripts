@@ -122,13 +122,13 @@ Rayfield:Notify({
 
 
 local Main  = Window:CreateTab("Main", 4483362458)
-local Tps = Window:CreateTab("Tps", 11713324460)
-local ChatBypasser = Window:CreateTab("Chat", 11707615337)
+local Tps = Window:CreateTab("Tps", 4483362458)
+local ChatBypasser = Window:CreateTab("Chat", 4483362458)
 
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
-local chatBypasser = Tps:CreateSection("ChatBypasser")
+local chatBypasser = ChatBypasser:CreateSection("ChatBypasser")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
