@@ -35,7 +35,6 @@ local Keybinds = Window:CreateTab("Keybinds", 4483362458)
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
-local keybinds = Keybinds:CreateSection("Keybinds")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
@@ -79,6 +78,20 @@ local InfiniteYield = Main:CreateButton({
 	end,
 })
 
+local Chatbypasser = Main:CreateButton({
+	Name     = "Chat Bypasser (Not mine)",
+	Callback = function()
+		Rayfield:Notify({
+			Title    = "Notify",
+			Content  = "Infinite Yield",
+			Duration = 3.5,
+			Image    = 4483362458,
+		})
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/aetherocus/My-Scripts/refs/heads/main/chatbypass.lua"))()
+	end,
+})
+
 local GodMode = Main:CreateToggle({
 	Name = "God Mode",
 	CurrentValue = false,
@@ -86,42 +99,6 @@ local GodMode = Main:CreateToggle({
 	Callback = function(Value)
 		god = not god
 	end,
-})
-
-local RemoteName = Main:CreateInput({
-   Name = "Bind Attacks",
-   CurrentValue = "",
-   PlaceholderText = "Ex: HeavyAttack,G",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
-   Callback = function(Text)
-        local splitted = Text:split(",")
-
-	local Keybind = Keybinds:CreateKeybind({
-                Name = splitted[1] .. math.random(5000,10000),
-                CurrentKeybind = splitted[2],
-                HoldToInteract = false,
-                Flag = math.random(5000,10000), 
-                Callback = function(Keybind)
-                       local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	               local ClientRequest = ReplicatedStorage:WaitForChild("Events"):WaitForChild("ClientRequest")
-						
-                       local args = {
-		             [1] = "custom",
-		             [2] = "server2",
-		             [3] = splitted[1],
-		             [4] = CFrame.new(322.2025451660156, 1.2266260385513306, -412.837158203125, 0.5210793018341064, 4.975538558937842e-08, -0.8535082936286926, 3.810540505355675e-08, 1, 8.155905106832506e-08, 0.8535082936286926, -7.502200816134064e-08, 0.5210793018341064),
-		             [5] = 1
-	                }
-
-	                local function sendRequest()
-	                    ClientRequest:FireServer(unpack(args))
-	                end
-
-			sendRequest()	
-                 end,
-        })
-   end,
 })
 
 game:GetService("RunService").RenderStepped:Connect(function()
@@ -792,6 +769,5 @@ local Maskttrial2tp = Tps:CreateButton({
 
 main:Set("Main")
 tps:Set("Tps")
-keybinds:Set("Keybinds")
 
 Rayfield:LoadConfiguration()
