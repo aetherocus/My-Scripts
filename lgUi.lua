@@ -128,7 +128,7 @@ local Chat = Window:CreateTab("Chat", 4483362458)
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
-local chat = ChatBypasser:CreateSection("Chat")
+local chat = Chat:CreateSection("Chat")
 
 local BillhookFuse = Main:CreateButton({
 	Name     = "Billhook Fuse",
