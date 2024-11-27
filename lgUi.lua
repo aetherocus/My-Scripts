@@ -31,7 +31,6 @@ Rayfield:Notify({
 
 local Main  = Window:CreateTab("Main", 4483362458)
 local Tps = Window:CreateTab("Tps", 4483362458)
-local Keybinds = Window:CreateTab("Keybinds", 4483362458)
 
 local main = Main:CreateSection("Main")
 local tps = Tps:CreateSection("Tps")
