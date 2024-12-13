@@ -149,7 +149,7 @@ local FlyScript = Main:CreateButton({
 	Callback = function()
 		Rayfield:Notify({
 			Title    = "Notify",
-			Content  = "Fly = LeftAlt, Increase speed = [, Decrease speed = ]",
+			Content  = "Fly = LeftAlt, Increase speed = Z, Decrease speed = X",
 			Duration = 6.5,
 			Image    = 4483362458,
 		})
