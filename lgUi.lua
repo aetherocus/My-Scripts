@@ -3,6 +3,7 @@ local plr = game:GetService("Players").LocalPlayer
 local char = plr.Character or plr.CharacterAdded:wait()
 local god = false
 local autobypass = false
+local music 
 
 local function Sendchat(msg)
 
@@ -180,6 +181,38 @@ local GodMode = Main:CreateToggle({
 	Callback = function(Value)
 		god = not god
 	end,
+})
+
+local Divider = Main:CreateDivider()
+
+local MusicLabel = Main:CreateLabel("Music (Require Banjo!)", 4483362458, Color3.fromRGB(255, 255, 255), false)
+
+local MusicParagraph = Main:CreateParagraph({Title = "Playable Music", Content = "Beginners, ClairDeLune, FF_Reference, FurElise, GleefulWhimsy, GrimReaper, Inspirational, Lute, Melancholic, MountainKing, Sisyphus, Unknown, Waltz"}) 
+
+local MusicInput = Main:CreateInput({
+   Name = "Music Input",
+   CurrentValue = "ClairDeLune",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Flag = "Input1000000",
+   Callback = function(Text)
+       music = Text
+       print(music)
+   end,
+})
+
+local MusicButton = Main:CreateButton({
+   Name = "Play Music",
+   Callback = function()
+      local args = {
+    [1] = "custom",
+    [2] = "server1",
+    [3] = "Song",
+    [4] = music
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClientRequest"):FireServer(unpack(args))
+   end,
 })
 
 local textBox = game:GetService("CoreGui").ExperienceChat.appLayout.chatInputBar.Background.Container.TextContainer.TextBoxContainer.TextBox
@@ -916,4 +949,3 @@ tps:Set("Tps")
 chat:Set("Chat")
 
 Rayfield:LoadConfiguration()
-
