@@ -145,20 +145,6 @@ local BillhookFuse = Main:CreateButton({
 	end,
 })
 
-local FlyScript = Main:CreateButton({
-	Name     = "Fly Script",
-	Callback = function()
-		Rayfield:Notify({
-			Title    = "Notify",
-			Content  = "Fly = LeftAlt",
-			Duration = 6.5,
-			Image    = 4483362458,
-		})
-
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/aetherocus/flyscript/refs/heads/main/Fly.lua"))()
-	end,
-})
-
 local InfiniteYield = Main:CreateButton({
 	Name     = "Infinite Yield",
 	Callback = function()
