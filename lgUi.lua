@@ -189,8 +189,8 @@ local MusicParagraph = Main:CreateParagraph({Title = "Playable Music", Content =
 
 local MusicInput = Main:CreateInput({
    Name = "Music Input",
-   CurrentValue = "ClairDeLune",
-   PlaceholderText = "",
+   CurrentValue = "",
+   PlaceholderText = "Music",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1000000",
    Callback = function(Text)
