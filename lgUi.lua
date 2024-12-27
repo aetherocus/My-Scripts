@@ -185,8 +185,6 @@ local GodMode = Main:CreateToggle({
 
 local Divider = Main:CreateDivider()
 
-local MusicLabel = Main:CreateLabel("Music (Require Banjo!)", 4483362458, Color3.fromRGB(255, 255, 255), false)
-
 local MusicParagraph = Main:CreateParagraph({Title = "Playable Music", Content = "Beginners, ClairDeLune, FF_Reference, FurElise, GleefulWhimsy, GrimReaper, Inspirational, Lute, Melancholic, MountainKing, Sisyphus, Unknown, Waltz"}) 
 
 local MusicInput = Main:CreateInput({
