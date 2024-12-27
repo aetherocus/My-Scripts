@@ -199,6 +199,60 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Client
    end,
 })
 
+local Divider2 = Main:CreateDivider()
+
+local AutocollectandsellvaseButton = Main:CreateButton({
+   Name = "Collect All Water pot N Sell",
+   Callback = function()
+      local Table = {}
+
+local args = {
+    [1] = 1
+}
+
+for i, v in pairs(game:GetService("Workspace").Items:GetChildren()) do
+   if v.Name == "WaterContainer" then
+      table.insert(Table, v)
+   end
+end
+
+task.wait(1)
+
+for i = 1, #Table do
+   char:PivotTo(CFrame.new(-286, -79, -1270))
+   task.wait(.3)
+   char:PivotTo(CFrame.new(-286, -79, -1270))
+   task.wait(1)
+   char:PivotTo(CFrame.new(-286, -79, -1270))
+   task.wait(.3)
+   char:PivotTo(CFrame.new(-286, -79, -1270))
+   
+   if Table[i]:FindFirstChild("Detector") then
+        local detector = Table[i]:FindFirstChild("Detector").ClickDetector
+        fireclickdetector(detector)
+        print("yes")
+
+        char:PivotTo(CFrame.new(1103, 33, -1082))
+        task.wait(.3)
+        char:PivotTo(CFrame.new(1103, 33, -1082))
+        task.wait(1)
+        char:PivotTo(CFrame.new(1103, 33, -1082))
+        task.wait(.3)
+        char:PivotTo(CFrame.new(1103, 33, -1082))
+         
+        local detector2 = game:GetService("Workspace").map.NPC.WaterKeeps.WaterKeep3:WaitForChild("ChatBox").ClickDetector
+        fireclickdetector(detector2)
+        print("yes")
+
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DialogueRemote"):FireServer(unpack(args))
+        task.wait(.3)
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DialogueRemote"):FireServer(unpack(args))
+        task.wait(.3)
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DialogueRemote"):FireServer(unpack(args))
+   end
+end
+end})
+
 local textBox = game:GetService("CoreGui").ExperienceChat.appLayout.chatInputBar.Background.Container.TextContainer.TextBoxContainer.TextBox
 
 local Bypasser = Chat:CreateInput({   
