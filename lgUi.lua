@@ -1,9 +1,39 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local plr = game:GetService("Players").LocalPlayer
-local char = plr.Character or plr.CharacterAdded:wait()
+local char
 local god = false
 local autobypass = false
+local mod = false
 local music 
+
+task.spawn(function()
+   char = plr.Character
+   plr.CharacterAdded:Connect(function(chara)
+       char = chara
+   end)
+end)
+
+game:GetService("Players").PlayerAdded:Connect(function(plr)
+      if mod then
+      local role = plr:GetRoleInGroup(10718535)
+	  
+      if role and role ~= "Guest" then
+          Rayfield:Notify({
+				Title    = role .. " has joined the game",
+				Content  = role .. " : " .. plr.Name .. "/" .. plr:WaitForChild("Data").Character.name.Value,
+				Duration = 5,
+				Image    = 4483362458,
+	       })
+      else
+          Rayfield:Notify({
+				Title    = plr.Name .. " has joined the game",
+				Content  = plr.Name .. "/" .. plr:WaitForChild("Data").Character.name.Value .. " dont have role in Rat Man Studios",
+				Duration = 5,
+				Image    = 4483362458,
+	       })
+	   end
+    end
+end)
 
 local function Sendchat(msg)
 
@@ -145,6 +175,31 @@ local BillhookFuse = Main:CreateButton({
 	end,
 })
 
+local NotifyMods = Main:CreateToggle({
+	Name = "Notify Players",
+	CurrentValue = false,
+	Flag = "modjoined",
+	Callback = function(Value)
+		mod = not mod
+
+		if mod then
+		    Rayfield:Notify({
+				Title    = "Notify Players",
+				Content  = "Notify Players Has Been enabled",
+				Duration = 3,
+				Image    = 4483362458,
+			})
+        else
+            Rayfield:Notify({
+				Title    = "Notify Players",
+				Content  = "Notify Players Has Been enabled",
+				Duration = 3,
+				Image    = 4483362458,
+			})
+		end
+	end,
+})
+
 local InfiniteYield = Main:CreateButton({
 	Name     = "Infinite Yield",
 	Callback = function()
@@ -166,6 +221,22 @@ local GodMode = Main:CreateToggle({
 	Flag = "god",
 	Callback = function(Value)
 		god = not god
+
+		if god then
+            Rayfield:Notify({
+				Title    = "Godmode",
+				Content  = "Godmode Has Been enabled",
+				Duration = 3,
+				Image    = 4483362458,
+			})
+        else
+            Rayfield:Notify({
+				Title    = "Godmode",
+				Content  = "Godmode Has Been disbled",
+				Duration = 3,
+				Image    = 4483362458,
+			})
+		end
 	end,
 })
 
